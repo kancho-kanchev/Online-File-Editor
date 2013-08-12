@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>HTML5 File Drag &amp; Drop API</title>
+	<link rel="stylesheet" type="text/css" media="all" href="styles.css" />
+</head>
+<body>
+	<h1>Декларация образец №6 2013г.</h1>
+	<form id="upload" action="upload.php" method="POST" enctype="multipart/form-data">
+		<fieldset>
+			<legend>Изберете файл с данни за декларация 6. Обикновенно се казва NRA62007.txt</legend>
+			<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="300000" />
+			<div>
+				<label for="fileselect">Файлове за зареждане:</label>
+				<input type="file" id="fileselect" name="fileselect[]" multiple="multiple" />
+				<div id="filedrag">или довлачете файловете тука</div>
+			</div>
+			<div id="submitbutton">
+				<button type="submit">Upload Files</button>
+			</div>
+		</fieldset>
+	</form>
+	<div id="dekl6">
+		<div class="alightright">Приложение  № 4 към чл. 2, ал. 2</div>
+		<table>
+			<thead>
+				<tr>
+					<th colspan="28" rowspan="2"><img src="images/nap.png">НАЦИОНАЛНА   АГЕНЦИЯ   ЗА   ПРИХОДИТЕ <br><strong>Д Е К Л А Р А Ц И Я</strong></br>образец № 6    2013г.</br>"Данни за дължими вноски и данък по чл. 42 ЗДДФЛ"</th>
+					<th colspan="21">
+						<table>
+							<tr>
+								<td colspan="19">1. Код на задълженото</td>
+							</tr>
+							<tr>
+								<td colspan="6">&nbsp&nbsp&nbspлице</td>
+								<td class="left" id="one_1"></td>
+								<td class="left" id="one_2"></td>
+								<td class="left" id="one_3"></td>
+								<td class="left" id="one_4"></td>
+								<td class="left" id="one_5"></td>
+								<td class="left" id="one_6"></td>
+								<td class="left" id="one_7"></td>
+								<td class="left" id="one_8"></td>
+								<td class="left" id="one_9"></td>
+								<td class="left" id="one_10"></td>
+								<td class="left" id="one_11"></td>
+								<td class="left" id="one_12"></td>
+								<td class="left" id="one_13"></td>
+							</tr>
+						</table>
+					</th>
+				</tr>
+				<tr>
+					<th colspan="19"></th>
+				</tr>
+				<tr>
+					<th colspan="8">2. Наименование на</br>задълженото лице</th>
+					<th colspan="34" class="bold" id="two_1"></th>
+					<th colspan="4">3.Член на</br>осиг. каса</th>
+					<th class="bold" id="three_1"></th>
+				</tr>
+				<tr>
+					<th colspan="4">4. Е-mail</br></th>
+					<th colspan="13" class="bold" id="four_1"></th>
+					<th colspan="4">5. Телефон</th>
+					<th colspan="12" class="bold" id="five_1"></th>
+					<th colspan="3">6. GSM</th>
+					<th colspan="11" class="bold" id="six_1"></th>
+				</tr>
+			</thead>
+			<tfoot>
+				<tr>
+					<td colspan="47" class="blue"></br>Подпис :</br>Печат</td>
+				</tr>
+				<tr>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+					<td class="none"></td>
+				</tr>
+				<tr class="footer">
+					<td colspan="20">
+						<input type="image" src="first.jpg" alt="Filter"/>
+						<input type="image" src="prev.jpg" alt="Filter"/>
+						<a href="#" class="active">1</a>
+						<a href="#">2</a>
+						<a href="#">3</a>
+						<a href="#">4</a>
+						<a href="#">5</a>
+						<a href="#">6</a>
+						<a href="#">7</a>
+						<a href="#">8</a>
+						<a href="#">9</a>
+						<a href="#">10</a>
+						...
+						<input type="image" src="next.jpg" alt="Filter"/>
+						<input type="image" src="last.jpg" alt="Filter"/>
+					</td>
+					<td colspan="7">
+						Page size:
+						<select name="page_size">
+							<option value="10">10</option>
+							<option value="15">15</option>
+							<option value="20">20</option>
+							<option value="25">25</option>
+							<option value="30">30</option>
+							<option value="35">35</option>
+						</select>
+					</td>
+					<td	colspan="20" class="alignRight">
+						335104 items in 33511 pages 
+					</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td colspan="11" class="blue"></td>
+					<td colspan="4">7.1. Код</br>корекция</td>
+					<td class="bold" id="seven_one_1"></td>
+					<td colspan="4" class="blue"> 8.1. Вид</br>  плащане</td>
+					<td colspan="4">7.2. Код</br>корекция</td>
+					<td class="bold" id="seven_two_1"></td>
+					<td colspan="4" class="blue"> 8.2. Вид</br>  плащане</td>
+					<td colspan="4">7.3. Код</br>корекция</td>
+					<td class="bold" id="seven_three_1"></td>
+					<td colspan="4" class="blue"> 8.3. Вид</br>  плащане</td>
+					<td colspan="4">7.4. Код</br>корекция</td>
+					<td class="bold" id="seven_four_1"></td>
+					<td colspan="4" class="blue"> 8.4. Вид</br>  плащане</td>
+				</tr>
+				<tr>
+					<td colspan="11" class="lightblue">9. Месец и година </td>
+					<td colspan="2" class="lightblue">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="nine_one_1"></td>
+								<td class="left" id="nine_one_2"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="5" class="lightblue">
+						<table>
+							<tr><td colspan="5"></td></tr>
+							<tr>
+								<td class="lightblue bold" id="nine_one_3"></td>
+								<td class="lightblue left" id="nine_one_4"></td>
+								<td class="lightblue left" id="nine_one_5"></td>
+								<td class="lightblue left" id="nine_one_6"></td>
+								<td class="lightblue bold">г.</td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2" class="blue bold" id="eight_one_1"></td>
+					<td colspan="2" class="lightblue">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="nine_two_1"></td>
+								<td class="left" id="nine_two_2"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="5" class="lightblue">
+						<table>
+							<tr><td colspan="5"></td></tr>
+							<tr>
+								<td class="lightblue bold" id="nine_two_3"></td>
+								<td class="lightblue left" id="nine_two_4"></td>
+								<td class="lightblue left" id="nine_two_5"></td>
+								<td class="lightblue left" id="nine_two_6"></td>
+								<td class="lightblue bold">г.</td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2" class="blue bold" id="eight_two_1"></td>
+					<td colspan="2" class="lightblue">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="nine_three_1"></td>
+								<td class="left" id="nine_three_2"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="5" class="lightblue">
+						<table>
+							<tr><td colspan="5"></td></tr>
+							<tr>
+								<td class="lightblue bold" id="nine_three_3"></td>
+								<td class="lightblue left" id="nine_three_4"></td>
+								<td class="lightblue left" id="nine_three_5"></td>
+								<td class="lightblue left" id="nine_three_6"></td>
+								<td class="lightblue bold">г.</td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2" class="blue bold" id="eight_tree_1"></td>
+					<td colspan="2" class="lightblue">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="nine_four_1"></td>
+								<td class="left" id="nine_four_2"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="5" class="lightblue">
+						<table>
+							<tr><td colspan="5"></td></tr>
+							<tr>
+								<td class="lightblue bold" id="nine_four_3"></td>
+								<td class="lightblue left" id="nine_four_4"></td>
+								<td class="lightblue left" id="nine_four_5"></td>
+								<td class="lightblue left" id="nine_four_6"></td>
+								<td class="lightblue bold">г.</td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2" class="blue bold" id="eight_four_1"></td>
+				</tr>
+
+				<tr>
+					<td colspan="11">10. Дължими вноски за ДОО</td>
+					<td colspan="9" class="bold alightright" id="ten_one_1"></td>
+					<td colspan="9" class="bold alightright" id="ten_two_1"></td>
+					<td colspan="9" class="bold alightright" id="ten_three_1"></td>
+					<td colspan="9" class="bold alightright" id="ten_four_1"></td>
+				</tr>
+				<tr>
+					<td colspan="11">11. Дължими вноски за</br>Учителски пенсионен фонд</td>
+					<td colspan="9" class="bold alightright" id="eleven_one_1"></td>
+					<td colspan="9" class="bold alightright" id="eleven_two_1"></td>
+					<td colspan="9" class="bold alightright" id="eleven_three_1"></td>
+					<td colspan="9" class="bold alightright" id="eleven_four_1"></td>
+				</tr>
+				<tr>
+					<td colspan="11">12. Дължими вноски за ДЗПО -</br>Универсален пенсионен фонд</td>
+					<td colspan="9" class="bold alightright" id="twelve_one_1"></td>
+					<td colspan="9" class="bold alightright" id="twelve_two_1"></td>
+					<td colspan="9" class="bold alightright" id="twelve_three_1"></td>
+					<td colspan="9" class="bold alightright" id="twelve_four_1"></td>
+				</tr>
+				<tr>
+					<td colspan="11">13. Дължими вноски за ДЗПО -</br>Професионален пенсионен фонд</td>
+					<td colspan="9" class="bold alightright" id="thirteen_one_1"></td>
+					<td colspan="9" class="bold alightright" id="thirteen_two_1"></td>
+					<td colspan="9" class="bold alightright" id="thirteen_three_1"></td>
+					<td colspan="9" class="bold alightright" id="thirteen_four_1"></td>
+				</tr>
+				<tr>
+					<td colspan="11">14. Дължими вноски</br>за здравно осигуряване</td>
+					<td colspan="9" class="bold alightright" id="fourteen_one_1"></td>
+					<td colspan="9" class="bold alightright" id="fourteen_two_1"></td>
+					<td colspan="9" class="bold alightright" id="fourteen_three_1"></td>
+					<td colspan="9" class="bold alightright" id="fourteen_four_1"></td>
+				</tr>
+				<tr>
+					<td colspan="11">15. Дължими вноски за фонд</br>"ГВРС"</td>
+					<td colspan="9" class="bold alightright" id="fifteen_one_1"></td>
+					<td colspan="9" class="bold alightright" id="fifteen_two_1"></td>
+					<td colspan="9" class="bold alightright" id="fifteen_three_1"></td>
+					<td colspan="9" class="bold alightright" id="fifteen_four_1"></td>
+				</tr>
+				<tr>
+					<td colspan="11">16. Удържан данък по чл. 42</br>и чл. 49, ал. 5 от ЗДДФЛ</td>
+					<td colspan="9" class="bold alightright" id="sixteen_one_1"></td>
+					<td colspan="9" class="bold alightright" id="sixteen_two_1"></td>
+					<td colspan="9" class="bold alightright" id="sixteen_three_1"></td>
+					<td colspan="9" class="bold alightright" id="sixteen_four_1"></td>
+				</tr>
+				<tr>
+					<td colspan="11">17. Авансов данък по чл. 42,</br>ал. 6 от ЗДДФЛ</td>
+					<td colspan="9" class="bold alightright" id="seventeen_one_1"></td>
+					<td colspan="9" class="bold alightright" id="seventeen_two_1"></td>
+					<td colspan="9" class="bold alightright" id="seventeen_three_1"></td>
+					<td colspan="9" class="bold alightright" id="seventeen_four_1"></td>
+				</tr>
+				<tr>
+					<td colspan="11">18. Дата на изплащане/</br>Начисляване</td>
+					<td colspan="2">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_one_1"></td>
+								<td class="left" id="eighteen_one_2"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_one_3"></td>
+								<td class="left" id="eighteen_one_4"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="5">
+						<table>
+							<tr><td colspan="5"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_one_5"></td>
+								<td class="left" id="eighteen_one_6"></td>
+								<td class="left" id="eighteen_one_7"></td>
+								<td class="left" id="eighteen_one_8"></td>
+								<td class="left">г.</td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_two_1"></td>
+								<td class="left" id="eighteen_two_2"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_two_3"></td>
+								<td class="left" id="eighteen_two_4"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="5">
+						<table>
+							<tr><td colspan="5"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_two_5"></td>
+								<td class="left" id="eighteen_two_6"></td>
+								<td class="left" id="eighteen_two_7"></td>
+								<td class="left" id="eighteen_two_8"></td>
+								<td class="left">г.</td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_three_1"></td>
+								<td class="left" id="eighteen_three_2"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_three_3"></td>
+								<td class="left" id="eighteen_three_4"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="5">
+						<table>
+							<tr><td colspan="5"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_three_5"></td>
+								<td class="left" id="eighteen_three_6"></td>
+								<td class="left" id="eighteen_three_7"></td>
+								<td class="left" id="eighteen_three_8"></td>
+								<td class="left">г.</td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_four_1"></td>
+								<td class="left" id="eighteen_four_2"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="2">
+						<table>
+							<tr><td colspan="2"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_four_3"></td>
+								<td class="left" id="eighteen_four_4"></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="5">
+						<table>
+							<tr><td colspan="5"></td></tr>
+							<tr>
+								<td class="bold" id="eighteen_four_5"></td>
+								<td class="left" id="eighteen_four_6"></td>
+								<td class="left" id="eighteen_four_7"></td>
+								<td class="left" id="eighteen_four_8"></td>
+								<td class="left">г.</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="messages">
+		<p>Статус на заявката</p>
+	</div>
+	<p>This is a demonstration of the HTML5 drag &amp; drop API which can be used to open local files.</p>
+	<p>For more information, please refer to:</p>
+	<ul>
+		<li><a href="http://www.sitepoint.com/html5-file-drag-and-drop/">How to Use HTML5 File Drag &amp Drop</a></li>
+		<li><a href="http://www.sitepoint.com/html5-javascript-open-dropped-files">How to Open Dropped Files Using HTML5 and JavaScript</a></li>
+		<li><a href="http://www.sitepoint.com/html5-ajax-file-upload">How to Asynchronously Upload Files Using HTML5 and Ajax</a></li>
+		<li><a href="http://www.sitepoint.com/html5-javascript-file-upload-progress-bar">How to Create Graphical File Upload Progress Bars in HTML5 and JavaScript</a></li>
+	</ul>
+	<script src="filedrag.js"></script>
+</body>
+</html>czz

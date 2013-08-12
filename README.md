@@ -129,5 +129,5 @@ http://nap.bg/document?id=827
 
 <pre>
 •  Online-File-Editor 
-	o	Online file editor for declaration form 6
+	o	Online file editor for declaration form  6
 </pre>

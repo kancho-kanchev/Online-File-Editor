@@ -69,7 +69,7 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 			if (name.length < 12) return false;
 			if (name.length >= 12) {
 				testName = name.substring(0,8) + name.substring(name.length-4);
-				if (testName.toUpperCase() == "NRA62007.TXT") return true;
+				if (testName.toUpperCase() === "NRA62007.TXT") return true;
 				else return false;
 			}
 		}

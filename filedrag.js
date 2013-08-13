@@ -10,6 +10,18 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 		return !isNaN(parseFloat(n)) && isFinite(n);
 	}
 
+	// check is Number13dot2
+	function IsNumber13dot2(n) {
+		var splitNumber = n.split ('.');
+		if (n.length < 1) return true;
+		if (!(splitNumber.length == 2)) return false;
+		if (!(splitNumber[1].length == 2)) return false;
+		if (!(splitNumber[0].length <= 13)) return false;
+		if (!IsNumber(splitNumber[0])) return false;
+		if (!IsNumber(splitNumber[1])) return false;
+		return true;
+	}
+
 	// getElementById
 	function $id(id) {
 		return document.getElementById(id);
@@ -259,15 +271,23 @@ Developed by Craig Buckler (@craigbuckler) of OptimalWorks.net
 											(array[10] === "5") ||
 											(array[10] === "6"))) Output(array[10], "eight_one_1");
 				else Output("<p>Feeld (8.1) type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
-				if (IsNumber(array[11])) Output(array[11], "ten_one_1");       // doo
-				else Output("<p>Feeld (8.1) type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
-				if (IsNumber(array[12])) Output(array[12], "eleven_one_1");    // Uchitelski fond
-				if (IsNumber(array[13])) Output(array[13], "twelve_one_1");    // DZPO
-				if (IsNumber(array[14])) Output(array[14], "thirteen_one_1");  // DZPO pro
-				if (IsNumber(array[15])) Output(array[15], "fourteen_one_1");  // ZO
-				if (IsNumber(array[16])) Output(array[16], "fifteen_one_1");   // GVRS
-				if (IsNumber(array[17])) Output(array[17], "sixteen_one_1");   // DOD
-				if (IsNumber(array[18])) Output(array[18], "seventeen_one_1"); // DOD
+				
+				if (IsNumber13dot2(array[11])) Output(array[11], "ten_one_1");       // doo
+				else Output("<p>Feeld 10 col.1 type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
+				if (IsNumber13dot2(array[12])) Output(array[12], "eleven_one_1");    // Uchitelski fond
+				else Output("<p>Feeld 11 col.1 type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
+				if (IsNumber13dot2(array[13])) Output(array[13], "twelve_one_1");    // DZPO
+				else Output("<p>Feeld 12 col.1 type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
+				if (IsNumber13dot2(array[14])) Output(array[14], "thirteen_one_1");  // DZPO pro
+				else Output("<p>Feeld 13 col.1 type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
+				if (IsNumber13dot2(array[15])) Output(array[15], "fourteen_one_1");  // ZO
+				else Output("<p>Feeld 14 col.1 type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
+				if (IsNumber13dot2(array[16])) Output(array[16], "fifteen_one_1");   // GVRS
+				else Output("<p>Feeld 15 col.1 type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
+				if (IsNumber13dot2(array[17])) Output(array[17], "sixteen_one_1");   // DOD
+				else Output("<p>Feeld 16 col.1 type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
+				if (IsNumber13dot2(array[18])) Output(array[18], "seventeen_one_1"); // DOD
+				else Output("<p>Feeld 17 col.1 type test: <strong><span>NOT PASSED</span></strong></p>", "messages");
 
 				// display pos.9 col.2
 				if (IsNumber(array[19][1]) && IsNumber(array[19][0])){
